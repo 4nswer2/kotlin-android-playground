@@ -28,7 +28,7 @@ class Service : BaseService() {
 
 	override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 		d("onStartCommand")
-		startForeground(1, makeNotification("サービス起動", ISODateTimeFormat.dateTime().print(System.currentTimeMillis()), "hoge"))
+		startForeground(1, makeNotification("サービス起動", ISODateTimeFormat.dateTime().print(System.currentTimeMillis()), Application.NOTIFICATION_CHANNEL_GENERAL))
 		return BaseService.START_STICKY_COMPATIBILITY
 	}
 
